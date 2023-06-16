@@ -1,4 +1,6 @@
-// let userAnswer = prompt('Зимой и летом одним цветом');
+// Загадка
+
+let userAnswer = prompt("Зимой и летом одним цветом");
 
 /*if (userAnswer === 'елка') {
   alert('Молодец!');
@@ -8,7 +10,7 @@
 
 // (условие) ? да : нет - тернарный оператор
 
-// alert((userAnswer.toLowerCase() === 'елка') ? 'Молодец!' : 'Не угадал!');
+alert(userAnswer.toLowerCase() === "елка" ? "Молодец!" : "Не угадал!");
 
 /*if (userAnswer === '') {
   console.log('Empty');
@@ -30,7 +32,6 @@
 
 // console.log(userAnswer);
 
-
 // Проверка на пароль
 
 /*let pass = prompt('Введите пароль');
@@ -42,5 +43,5 @@ if (pass === 123) {
   alert('Stop');
 }*/
 
-let pass = Number(prompt('Введите пароль'));
-alert((pass === 123) ? 'Go' : 'Stop');
+let pass = Number(prompt("Введите пароль"));
+alert(pass === 123 ? "Go" : "Stop");
