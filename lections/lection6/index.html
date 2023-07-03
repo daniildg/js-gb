@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 class="title">Lorem, ipsum dolor.</h1>
+  <h2 id="heading">Lorem ipsum dolor sit amet.</h2>
+  <ul class="ul">
+    <li class="list">list1</li>
+    <li class="list">list2</li>
+    <li class="list">list3</li>
+    <li class="list">list4</li>
+  </ul>
+  <p class="text">Lorem, ipsum dolor. 1</p>
+  <p class="text">Lorem, ipsum dolor. 2</p>
+  <p class="text">Lorem, ipsum dolor. 3</p>
+  <p class="text">Lorem, ipsum dolor. 4</p>
+  <p class="text">Lorem, ipsum dolor. 5</p>
+  <section class="section"></section>
+
+  <button class="btn">Купить</button>
+  <div class="content"></div>
+  <img class="img" src="photo.jpg" alt="photo">
+
+  <script>
+    const headingTwo = document.getElementById('heading');
+    const headingThree = document.querySelector('#heading');
+    const listEls = document.getElementsByClassName('list');
+    console.log(listEls);
+    const listElsQs = document.querySelectorAll('.list');
+    console.log(listElsQs);
+    const listElsTag = document.getElementsByTagName('li');
+    console.log(listElsTag);
+    const heading = document.querySelector('.title');
+    const text = document.querySelectorAll('.text');
+    console.log(headingTwo);
+    console.log(headingThree);
+    console.log(heading);
+    text.forEach(element => {
+      console.log(element);
+    });
+
+    heading.textContent = 'Изменили текст с помощью DOM';
+    headingTwo.textContent = "Заголовок из JS";
+
+    const sectionEl = document.querySelector('.section');
+    const paragraphEl = document.createElement('p');
+    sectionEl.appendChild(paragraphEl);
+
+    const textNode = document.createTextNode('Создали текстовую ноду как отдельную сущность чтобы вложить ее далее в параграф');
+    paragraphEl.appendChild(textNode);
+
+    headingThree.remove();
+
+    const buttonEl = document.querySelector('.btn');
+    const contentEl = document.querySelector('.content');
+    const imgEl = document.querySelector('.img');
+    imgEl.onclick = function() {
+      imgEl.src = 'newphoto.jpg';
+      imgEl.alt = 'newphoto'
+    }
+    
+    const textEl = document.createElement('p');
+    textEl.textContent = 'lorem ipsum si dolor et cetera';
+    
+    buttonEl.onclick = function() {
+      buttonEl.textContent = 'Товар в корзине';
+      contentEl.appendChild(textEl);
+    }
+  </script>
+</body>
+</html>
