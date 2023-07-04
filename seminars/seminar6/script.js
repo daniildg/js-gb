@@ -38,3 +38,23 @@ buttonSendEl.addEventListener("click", () => {
   buttonSendEl.textContent = "Текст отправлен";
   buttonSendEl.disabled = "true";
 });
+
+const intDivEl = contentThirdEl.querySelector(".asd");
+const intPEl = intDivEl.querySelector("p:first-child");
+console.log(intPEl);
+
+const textEls = contentThirdEl.querySelectorAll(".txt");
+// textEls.forEach((textEl) => {
+//   console.log(textEl);
+// });
+
+// for (let i = 0; i < textEls.length; i++) {
+//   console.log(textEls[i]);
+// }
+
+for (const textEl of textEls) {
+  console.log(textEl);
+}
+
+const lastPEl = textEls[textEls.length - 1];
+console.log(lastPEl.parentElement.previousElementSibling.querySelector("a"));
