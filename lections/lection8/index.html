@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="button">Купить</button>
+
+  <ul class="menu">
+    <li>item 1</li>
+    <li>item 2</li>
+    <li>item 3</li>
+  </ul>
+
+  <a href="https://yandex.ru" class="link">Yandex</a>
+
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+  <form action="#">
+    <input type="text" class="input">
+    <div class="error"></div>
+    <button type="submit">Go</button>
+  </form>
+  <script>
+    const inputText = document.querySelector('input');
+    const formRun = document.querySelector('form');
+    const errorEl = document.querySelector('.error');
+
+    formRun.addEventListener('submit', (e) => {
+      if (inputText.value === '') {
+        event.preventDefault();
+        errorEl.textContent = 'Поле не должно быть пустым';
+      }
+    });
+
+    /*
+    const inputEl = document.querySelector('input');
+
+    inputEl.addEventListener('input', (e) => {
+      if (Number(e.target.value) === 123) {
+        console.log('верно');
+      } else {
+        console.log('неправильно');
+      }
+    });
+    */
+    window.addEventListener('resize', (e) => {
+      console.log('resize');
+    });
+
+    document.addEventListener('copy', function (e) {
+      const copyText = document.getSelection().toString();
+      console.log(copyText);
+    });
+
+    const link = document.querySelector('.link');
+
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      console.log('hello link');
+    });
+
+    /*
+    window.addEventListener('keydown', function (e) {
+      console.log(e.key);
+    });
+
+    const buttonEl = document.querySelector('.button');
+    buttonEl.addEventListener('mouseover', function (e) {
+      console.log('не нужно наводить, лучше нажми');
+    });
+
+    buttonEl.addEventListener('mouseleave', function (e) {
+      console.log('не нужно убегать, лучше нажми');
+    });
+    */
+
+    /*
+    const buttonEl = document.querySelector('.button');
+    let count = 0;
+
+    const click = () => {
+      console.log('click js button');
+      count++;
+      console.log(`Кликов по кнопке - ${count}`);
+    }
+    
+    buttonEl.addEventListener('click', click);
+    */
+
+    /*
+    const buttonEls = document.querySelectorAll('.button');
+
+    buttonEls.forEach(element => {
+      element.addEventListener('click', function (e) {
+        const target = e.target
+        console.log(target);
+      });
+    });
+    */
+    /*
+    const menuEl = document.querySelector('.menu');
+
+    const nameFunction = (e) => {
+      console.log(e.target, e.currentTarget);
+    }
+
+    menuEl.addEventListener('click', nameFunction);
+    */
+
+    /*
+    document.addEventListener('DOMContentLoaded', function (e) {
+      console.log('loaded');
+    });
+
+    window.addEventListener('load', function (e) {
+      console.log('все загрузилось');
+    });
+    */
+    
+  </script>
+</body>
+</html>
