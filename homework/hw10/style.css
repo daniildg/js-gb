@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: antiquewhite;
+}
+
+.heading {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 50px;
+  color: #3c2f2f;
+}
+
+.app {
+  padding-top: 42px;
+  padding-bottom: 32px;
+  max-width: 1308px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+  gap: 28px;
+}
+
+.character__card {
+  max-width: 246px;
+  width: 100%;
+  height: auto;
+}
+
+.character__img {
+  max-width: 100%;  
+  height: auto;  
+}
