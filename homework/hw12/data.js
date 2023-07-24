@@ -57,4 +57,3 @@ const json = `{
   ]
 }`;
 
-console.log(getProductsObject());
